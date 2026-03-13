@@ -143,6 +143,9 @@
             <h2 class="section-title">👁️ 예방 전공 (Prevention & Intel)</h2>
             <div class="character-grid" id="prevGrid"></div>
 
+            <h2 class="section-title">📡 지휘 전공 (Command & Control)</h2>
+            <div class="character-grid" id="cmdGrid"></div>
+
             <h2 class="section-title">📋 교관진 (Instructors)</h2>
             <div class="character-grid" id="profGrid"></div>
             
@@ -366,12 +369,20 @@
             { code: 'd4', group: 'prev', major: '예방', name: "백소라", age: "21", gender: "여성", ability: "천리이 (반경 1km 내의 미세한 소리 청취)", appearance: "백발, 자안, 폭유", personality: "소심함, 예민함, 섬세함", speech: "말을 더듬음, 필담 선호", note: "불안할 때 스킨십에 매우 적극적임." },
             { code: 'd5', group: 'prev', major: '예방', name: "차도준", age: "23", gender: "남성", ability: "하모닉스 (이능력 공명 및 감정 폭주 사전 감지)", appearance: "청발, 흑안, 잔근육, 181cm", personality: "가벼움, 눈치 빠름, 능청스러움", speech: "플러팅, 말이 많고 유들유들함", note: "여미새 기질이 다분함." },
             
+            // 지휘 전공
+            { code: 'e1', group: 'cmd', major: '지휘', name: "윤세아", age: "24", gender: "여성", ability: "패스파인더 (10초 미래 예측)", appearance: "흑장발, 녹안, 거유", personality: "냉철함, 통제욕, 전략가", speech: "나긋나긋함, 압박감, 실수 교정", note: "너무 많은 미래를 보면 과부하가 옴." },
+            { code: 'e2', group: 'cmd', major: '지휘', name: "한여름", age: "20", gender: "여성", ability: "공간조망 (주변 공간 입체 지도화)", appearance: "주황색 포니테일, 벽안, 거유", personality: "활발함, 눈치 빠름, 친화력", speech: "영남 사투리, 밝음, 재빠름", note: "팀의 분위기 메이커." },
+            { code: 'e3', group: 'cmd', major: '지휘', name: "차수민", age: "22", gender: "여성", ability: "백색소음 (공황·긴장 완화 소음 방출)", appearance: "회색 웨이브 단발, 회안, 폭유", personality: "차분함, 신뢰감, 중재자", speech: "상냥함, 다독임, 언니 같은 어조", note: "팀원들의 멘탈을 전담 관리하는 지휘관." },
+            { code: 'e4', group: 'cmd', major: '지휘', name: "강유리", age: "21", gender: "여성", ability: "싱크로 (특정 인물 시점으로 빙의)", appearance: "보라색 울프컷, 적안, 평유", personality: "자신감, 오지랖, 허영심", speech: "잘난 척, 당당함, 다루데레", note: "장난 치는 것을 즐김." },
+            { code: 'e5', group: 'cmd', major: '지휘', name: "박태오", age: "25", gender: "남성", ability: "벡터변환 (대상 운동 방향 강제 수정)", appearance: "금장발, 벽안, 태닝", personality: "권위 중시, 책임감, 은근 허당", speech: "고지식함, 잔소리, 먹을 것에 약함", note: "능력 사용 시 신체적 충격 패널티가 있음." },
+
             // 교관진
             { code: 'p1', group: 'prof', major: '교관 (교장)', name: "강무진", age: "45", gender: "남성", ability: "공간왜곡 (특정 공간을 격리하거나 구조를 비틂)", appearance: "백발, 벽안, 잔근육", personality: "침묵, 관찰자, 속죄", speech: "무기력해 보이나 날카로운 억양", note: "구조대 창설 멤버이자 현 소방학교 교장." },
             { code: 'p2', group: 'prof', major: '교관 (화재)', name: "방화준", age: "30", gender: "남성", ability: "화염봉인 (이능 발화 강제 진압)", appearance: "흑발 포마드, 적안, 근육질", personality: "효율 중시, 과보호, 내재된 죄책감", speech: "엄격한 군인 말투, 단호함", note: "연화연의 사촌 오빠. 화재 진압 전담 교관." },
             { code: 'p3', group: 'prof', major: '교관 (구조)', name: "마도희", age: "33", gender: "여성", ability: "중력제어 (대상의 무게 조절)", appearance: "청발 사이드포니테일, 분홍눈, 거유, 태닝", personality: "호쾌함, 단순함, 행동파", speech: "'어이'체 사용, 호통, 시원시원함", note: "근육질의 구조 실무 교관." },
             { code: 'p4', group: 'prof', major: '교관 (구급)', name: "유정인", age: "32", gender: "여성", ability: "신경가속 (카페인 섭취 시 사고 및 손놀림 한계 돌파)", appearance: "갈색 땋은 머리, 청안, 거유", personality: "귀여운 것을 좋아함, 천재, 생활력 제로", speech: "만사 귀찮음, 냉소적, 직설적", note: "중증 카페인 중독 구급 교관." },
-            { code: 'p5', group: 'prof', major: '교관 (예방)', name: "천서진", age: "28", gender: "여성", ability: "천리안 (반경 5km 상황 실시간 감시)", appearance: "녹색 장발 웨이브, 녹안, 폭유", personality: "꼼꼼함, 깐깐함, 원칙주의", speech: "딱딱한 '~입니다'체, 지적함, 서툰 다정함", note: "예방 및 정보수집 교관." }
+            { code: 'p5', group: 'prof', major: '교관 (예방)', name: "천서진", age: "28", gender: "여성", ability: "천리안 (반경 5km 상황 실시간 감시)", appearance: "녹색 장발 웨이브, 녹안, 폭유", personality: "꼼꼼함, 깐깐함, 원칙주의", speech: "딱딱한 '~입니다'체, 지적함, 서툰 다정함", note: "예방 및 정보수집 교관." },
+            { code: 'p6', group: 'prof', major: '교관 (지휘)', name: "선우정", age: "34", gender: "여성", ability: "절대명령 (범위 내 대상 행동 강제)", appearance: "분홍 웨이브, 적안, 평유", personality: "지배적, 유혹적, 완벽주의", speech: "느긋한 명령조, 압박감, 유혹적", note: "지휘 전담 교관. 의외로 M 성향이 있음." }
         ];
 
         // --- FUNCTIONS ---
@@ -426,6 +437,7 @@
                 'rescue': document.getElementById('rescueGrid'),
                 'ems': document.getElementById('emsGrid'),
                 'prev': document.getElementById('prevGrid'),
+                'cmd': document.getElementById('cmdGrid'),
                 'prof': document.getElementById('profGrid')
             };
 
