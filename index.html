@@ -114,6 +114,7 @@
     </style>
 </head>
 <body>
+    <!-- Main Navigation -->
     <nav class="main-nav">
         <div class="nav-container">
             <div class="nav-logo"><span>Fire</span> Academy</div>
@@ -125,6 +126,7 @@
         </div>
     </nav>
 
+    <!-- Characters Tab -->
     <div id="charactersTab" class="tab-content active">
         <div class="container">
             <h1>이능력 소방학교 : Personnel</h1>
@@ -152,10 +154,12 @@
         </div>
     </div>
 
+    <!-- World Tab -->
     <div id="worldTab" class="tab-content">
         <div class="container">
             <h1>재난 및 시설정보</h1>
             
+            <!-- 소방학교 지도 이미지 추가 -->
             <img src="https://silou.org/AE/bg/0.webp" alt="이능력 소방학교 지도" class="map-image">
             
             <div class="guide-section">
@@ -219,6 +223,7 @@
         </div>
     </div>
 
+    <!-- Schedule Tab -->
     <div id="scheduleTab" class="tab-content">
         <div class="container">
             <h1>Academic Schedule</h1>
@@ -227,14 +232,13 @@
                 <h2 class="guide-title">⏰ 표준 일과 (Daily Routine)</h2>
                 <div class="guide-card">
                     <p style="font-size: 1.05em; color: #ccc;">
-                        <strong>[06:00 - 09:00]</strong> 점호, 아침운동, 조식 및 수업 준비<br>
-                        <strong>[09:00 - 12:00]</strong> 이론 수업 (전공 무관, 전교생 수강 / 월:화재, 화:구조, 수:구급, 목:예방, 금:지휘)<br>
-                        <strong>[12:00 - 13:00]</strong> 중식<br>
-                        <strong>[13:00 - 14:00]</strong> 체력 단련<br>
-                        <strong>[14:00 - 17:00]</strong> 실기 (전공 심화 or 합동 훈련)<br>
-                        <strong>[17:00 - 22:00]</strong> 자유 시간<br>
+                        <strong>[06:00 - 09:00]</strong> 기상 점호 및 아침 체력 단련, 조식 및 수업 준비<br>
+                        <strong>[09:00 - 12:00]</strong> 공통 이론 수업 (전교생 수강 / 요일별: 화재, 구조, 구급, 예방, 지휘)<br>
+                        <strong>[12:00 - 14:00]</strong> 중식 및 휴식<br>
+                        <strong>[14:00 - 17:00]</strong> 체력 단련 및 전공 심화 / 합동 전술 실기 훈련<br>
+                        <strong>[17:00 - 22:00]</strong> 석식 및 자유 시간 (돌발 이능화재 출동 이벤트 발생 가능)<br>
                         <br>
-                        <strong style="color: var(--secondary-color);">[주말 및 평가]</strong> 주말 공식 수업 없음. 외출/외박 인원 일요일 21시 복귀. 매월 마지막 주차 토요일 1달 수업 종합평가 (순위 게시).
+                        <strong style="color: var(--secondary-color);">[주말 및 평가]</strong> 주말 공식 수업 없음 (외출자는 일요일 21시 복귀). 매월 마지막 주 토요일 종합평가 진행.
                     </p>
                 </div>
             </div>
@@ -249,16 +253,16 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr><td>3월</td><td>입학식 (3/4) | 기초 체력평가 (3/5) | 학생장 선발 및 동아리 조직 (3/12) | 신입생 모의 구출전 (3/20)</td></tr>
-                        <tr><td>4월</td><td>화재기초 실습 (4/5) | 재난통신 실습 (4/12) | <strong>중간고사</strong> (4/20) | 야간 비상훈련 (4/26)</td></tr>
-                        <tr><td>5월</td><td>화동제 (5/5) | 철인 소방관 경기 (5/12) | 현장전술 발표회 (5/20)</td></tr>
-                        <tr><td>6월</td><td>추모식 (6/5) | 특수장비 실습 (6/10) | <strong>기말고사</strong> (6/20)</td></tr>
-                        <tr><td>7월</td><td>동해안 합숙 (7/2~7/5) | 이상기후 대비 훈련 (7/20)</td></tr>
-                        <tr><td>8월</td><td>하계 방학 (8/1) | 비공식 특훈</td></tr>
-                        <tr><td>9월</td><td>2학기 개강 (9/1) | 전술경연대회 (9/8) | 폐쇄구역훈련 (9/15)</td></tr>
-                        <tr><td>10월</td><td>전공합동훈련 (10/5) | <strong>중간고사</strong> (10/20) | ASH 대비전 (10/31)</td></tr>
-                        <tr><td>11월</td><td>소방의 날 (11/9) | 서바이벌 토너먼트 (11/16) | 특수회복제 시연회 (11/23)</td></tr>
-                        <tr><td>12월</td><td>혹한기훈련 (12/12) | <strong>기말고사</strong> (12/20) | 성탄제 (12/25) | 졸업사정회 (12/30)</td></tr>
+                        <tr><td>3월</td><td>입학식/전공배치 (3/2) | 체력평가 (3/3) | 중앙소방본부 견학 (3/20) | 신입생 모의구출전 (3/27)</td></tr>
+                        <tr><td>4월</td><td>화재대응 기초실습 (4/5) | 지휘권 인수인계 모의전 (4/12) | <strong>중간고사(이론)</strong> (4/20) | 야간비상소집 (4/26)</td></tr>
+                        <tr><td>5월</td><td>화동제 (5/5) | 철인 소방관 경기 (5/15) | 전국교류전 (5/25) | 전공별 전술 발표회 (5/29)</td></tr>
+                        <tr><td>6월</td><td>순직자 추모식 (6/5) | <strong>기말고사(실기)</strong> (6/20) | 통합 실습 (6/25) | 하계파견 사전교육 (6/30)</td></tr>
+                        <tr><td>7월</td><td>소방관서 파견실습 (7/2~7/5) | 동해안 수난구조 합숙 (7/15~7/18) | 산불 대응 훈련 (7/24)</td></tr>
+                        <tr><td>8월</td><td>하계 방학 (비공식 특훈, 열화상 극복 보충수업, 우수생 야간 특강)</td></tr>
+                        <tr><td>9월</td><td>2학기 개강 (9/1) | 전술경연대회 (9/15) | 야간 종합출동훈련 (9/22) | 폐쇄 1급재난구역 탐색 (9/29)</td></tr>
+                        <tr><td>10월</td><td>대형화재 방어선구축 (10/7) | <strong>중간고사(조별 연계진압)</strong> (10/20) | ASH 대비 심야 게릴라 방어전 (10/31)</td></tr>
+                        <tr><td>11월</td><td>소방의 날 (11/9) | 서바이벌 구출 토너먼트 (11/12) | 이능력 회복제 시연 (11/20) | 실무 모의평가 (11/27)</td></tr>
+                        <tr><td>12월</td><td>혹한기 훈련 (12/12) | <strong>기말고사(다重複합 재난 평가)</strong> (12/20) | 안전기원제 (12/25) | 졸업사정회 (12/30)</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -268,6 +272,7 @@
         </div>
     </div>
 
+    <!-- Modal -->
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal-content">
             <div class="modal-header">
@@ -275,11 +280,13 @@
                 <button class="close-btn" id="closeBtn">&times;</button>
             </div>
             
+            <!-- Modal Tabs -->
             <div class="modal-tabs">
                 <button class="modal-tab active" onclick="switchModalTab('details')">프로필 상세</button>
                 <button class="modal-tab" onclick="switchModalTab('gallery')">상황별 기록 (Gallery)</button>
             </div>
 
+            <!-- Details Tab Content -->
             <div id="modalDetailsTab" class="modal-tab-content active">
                 <div class="details-layout">
                     <div class="standing-image-container">
@@ -322,58 +329,67 @@
                 </div>
             </div>
 
+            <!-- Gallery Tab Content -->
             <div id="modalGalleryTab" class="modal-tab-content">
                 <div class="images-grid" id="modalGalleryGrid">
-                    </div>
+                    <!-- Javascript로 갤러리 이미지 주입 -->
+                </div>
             </div>
         </div>
     </div>
 
     <script>
         // --- DATA ---
-        const characters = [
+        const characters =[
             // 화재 전공
-            { code: 'a1', group: 'fire', major: '화재', name: "연화연", age: "24", gender: "여성", ability: "감정연소(감정에따라불꽃형성)", appearance: "적발포니+바보털+벽안+거유", personality: "다정+억제+거리감", speech: "외강내유+솔직하지못함+내면다정", note: "{{user}}에게약함" },
-            { code: 'a2', group: 'fire', major: '화재', name: "홍유나", age: "21", gender: "여성", ability: "화선유도(불길방향속도조절)", appearance: "붉은트윈+적안+평유", personality: "직관+허세+불안정", speech: "~허접+욕데레+중얼거림", note: "친구부상트라우마" },
-            { code: 'a3', group: 'fire', major: '화재', name: "백설아", age: "22", gender: "여성", ability: "열치환(열기를냉기로변환)", appearance: "은장발+청안+거유", personality: "오만+체면중독+승부욕", speech: "우아한척+빈정+완벽주의", note: "칭찬에약함" },
-            { code: 'a4', group: 'fire', major: '화재', name: "조연주", age: "21", gender: "여성", ability: "기류조작(연기압축및조절)", appearance: "흑발포니+흑안+거유", personality: "일침+프로의식+귀차니즘", speech: "나른+핵심만말함+팩폭형", note: "게으르나현장에선제일침착" },
-            { code: 'a5', group: 'fire', major: '화재', name: "염강석", age: "23", gender: "남성", ability: "화염조형(불꽃으로방화벽·진입로형성)", appearance: "갈색숏컷+갈안+근육질", personality: "단순+열혈+무식", speech: "광주방언+직설+큰소리", note: "바보남캐" },
+            { code: 'a1', group: 'fire', major: '화재', name: "연화연", age: "24", gender: "여성", ability: "감정연소 (억눌린 감정에 비례해 화력 증가)", appearance: "적발 포니테일, 바보털, 벽안, 거유", personality: "냉정, 억제, 거리감 둠", speech: "무감정, 건조한 단답, 가차없음", note: "감정이 재앙으로 번진 트라우마 보유. 여미새 극혐. (유저의 첫사랑 설정)" },
+            { code: 'a2', group: 'fire', major: '화재', name: "홍유나", age: "21", gender: "여성", ability: "화선유도 (불길의 방향과 속도 조절)", appearance: "붉은 트윈테일, 적안", personality: "직관적, 메스가키, 내면의 불안", speech: "'~허접' 말투, 가끔 중얼거림", note: "과거 친구 부상에 대한 트라우마 보유." },
+            { code: 'a3', group: 'fire', major: '화재', name: "백설아", age: "22", gender: "여성", ability: "열치환 (열기를 냉기로 변환)", appearance: "은장발, 청안, 거유", personality: "오만함, 강박증, 강한 승부욕", speech: "우아한 척, 빈정거림, 완벽주의적", note: "강한 라이벌 의식, 타인의 인정에 집착함." },
+            { code: 'a4', group: 'fire', major: '화재', name: "조연주", age: "21", gender: "여성", ability: "기류조작 (연기 압축 및 흐름 조절)", appearance: "흑발 포니테일, 흑안, 거유", personality: "무심함, 나른함, 귀차니즘", speech: "나른한 톤, 핵심만 찌르는 일침형", note: "평소 게으르나 현장에서는 가장 침착함." },
+            { code: 'a5', group: 'fire', major: '화재', name: "염강석", age: "23", gender: "남성", ability: "화염조형 (불꽃으로 방화벽, 진입로 형성)", appearance: "갈색 숏컷, 갈안, 근육질", personality: "단순함, 열혈, 무식함", speech: "서남 방언 사용, 직설적이고 목소리가 큼", note: "우직한 바보 남캐 포지션." },
+            { code: 'a5t', group: 'fire', major: '화재', name: "염강희", age: "23", gender: "여성", ability: "화염조형 (불꽃으로 방화벽, 진입로 형성)", appearance: "갈색 장발, 갈안, 근육질, 거유", personality: "단순함, 열혈, 무식함", speech: "광주 방언 사용, 직설적이고 큰소리", note: "염강석의 TS버전. 백치미 속성 보유." },
             
             // 구조 전공
-            { code: 'b1', group: 'rescue', major: '구조', name: "주세아", age: "21", gender: "여성", ability: "내화골격(고열압도적내성)", appearance: "주황웨이브장발+흑안+거유", personality: "직설+호전+신념", speech: "털털+도발적+거침없음", note: "선의의라이벌" },
-            { code: 'b2', group: 'rescue', major: '구조', name: "도이화", age: "22", gender: "여성", ability: "히트맨(열기흡수)", appearance: "백발히메+백안+거유", personality: "천연+해맑음+고통즐김", speech: "웃으며섬뜩한 말+존대+꽃비유", note: "아픈티안냄" },
-            { code: 'b3', group: 'rescue', major: '구조', name: "방미소", age: "21", gender: "여성", ability: "괴력(근력폭증)", appearance: "노란사과머리+갈안+빈유", personality: "단순+의리+호탕", speech: "거침없음+호탕+반말", note: "동료애" },
-            { code: 'b4', group: 'rescue', major: '구조', name: "송소이", age: "20", gender: "여성", ability: "공간도약(10m순간이동)", appearance: "갈색올림머리+녹안+빈유", personality: "소심+겁쟁이+성실", speech: "귀염+존대+단답", note: "겁먹으면빨라짐" },
-            { code: 'b5', group: 'rescue', major: '구조', name: "선우철", age: "24", gender: "남성", ability: "강철피부(피부금속경화)", appearance: "흑발반삭+적안+근육질", personality: "묵묵+우직+원칙", speech: "진중+행동파+해병문학말투", note: "해병대.믿음직" },
+            { code: 'b1', group: 'rescue', major: '구조', name: "주세아", age: "21", gender: "여성", ability: "내화골격 (고열에 대한 압도적 내성)", appearance: "주황색 웨이브 장발, 흑안, 거유", personality: "직설적, 호전적, 뚜렷한 신념", speech: "털털함, 도발적, 거침없음", note: "화재 현장 불속으로 가장 먼저 뛰어드는 타입." },
+            { code: 'b2', group: 'rescue', major: '구조', name: "도이화", age: "22", gender: "여성", ability: "히트맨 (주변 열기를 자신에게 전이시켜 흡수)", appearance: "백발 히메컷, 백안, 거유", personality: "헌신적, 인내심 강함, 자기소모적", speech: "소심함, 조용한 강단, 희생적 어조", note: "자해 성향이 있으며 아픈 티를 내지 않음." },
+            { code: 'b3', group: 'rescue', major: '구조', name: "방미소", age: "21", gender: "여성", ability: "괴력 (순간적으로 근력 폭증)", appearance: "노란색 사과머리, 갈안", personality: "단순함, 의리파, 호탕함", speech: "거침없는 반말, 호탕한 웃음", note: "동료애가 매우 깊음." },
+            { code: 'b4', group: 'rescue', major: '구조', name: "송소이", age: "20", gender: "여성", ability: "공간도약 (10m 이내 순간이동)", appearance: "갈색 올림머리, 녹안", personality: "소심함, 겁쟁이, 성실함", speech: "조용한 존댓말, 단답형", note: "겁을 먹거나 패닉일 때 능력 속도가 더 빨라짐." },
+            { code: 'b5', group: 'rescue', major: '구조', name: "선우철", age: "24", gender: "남성", ability: "강철피부 (피부를 금속질로 경화)", appearance: "흑발 반삭, 적안, 근육질", personality: "묵묵함, 우직함, 원칙주의", speech: "과묵함, 진중함, 말보다 행동", note: "해병대 출신으로 가장 믿음직한 대원." },
+            { code: 'b5t', group: 'rescue', major: '구조', name: "선우희", age: "24", gender: "여성", ability: "강철피부 (피부를 금속질로 경화)", appearance: "흑발 숏컷, 적안, 근육질, 폭유", personality: "묵묵함, 우직함, 원칙주의", speech: "진중함, 행동파, 해병문학 말투", note: "선우철의 TS버전. 해병대 출신." },
             
             // 구급 전공
-            { code: 'c1', group: 'ems', major: '구급', name: "도지아", age: "24", gender: "여성", ability: "급속치유(상처회복촉진)", appearance: "은장발+나비머리장식+적안+폭유", personality: "온화+배려+외유내강", speech: "상냥+엉뚱+다정함", note: "마망.도하늘언니" },
-            { code: 'c2', group: 'ems', major: '구급', name: "경혜수", age: "22", gender: "여성", ability: "셧다운(신경계통증억제)", appearance: "흑장발생머리+회안+평유", personality: "웃으며멘탈도려내는독설가", speech: "친절+존대+의학용어", note: "S성향" },
-            { code: 'c3', group: 'ems', major: '구급', name: "안마리", age: "24", gender: "여성", ability: "프시케(나비형태로에너지전달)", appearance: "금발웨이브+벽안+폭유", personality: "명랑+수다+긍정", speech: "활발+한국어서툼+영어욕설", note: "한백혼혈" },
-            { code: 'c4', group: 'ems', major: '구급', name: "도하늘", age: "23", gender: "여성", ability: "에어셀(거대산소막생성)", appearance: "하늘색장발+적안+거유", personality: "평소:천연4차원/현장:냉정분석가", speech: "평소:느릿+엉뚱/현장:빠름단호", note: "이중모드성격,도지아동생" },
-            { code: 'c5', group: 'ems', major: '구급', name: "소찬우", age: "25", gender: "남성", ability: "생체투시(홀로그램소환,환자진단)", appearance: "적발숏컷+흑안+보통", personality: "지적+까칠+츤데레", speech: "오만+허세+반말", note: "간호사출신.손빠름" },
+            { code: 'c1', group: 'ems', major: '구급', name: "도지아", age: "24", gender: "여성", ability: "급속치유 (상처 회복 촉진)", appearance: "은장발, 나비 머리장식, 적안, 폭유", personality: "온화함, 배려심, 외유내강", speech: "상냥함, 약간 엉뚱함, 다정다감", note: "도하늘의 언니. 팀의 '마망' 포지션." },
+            { code: 'c2', group: 'ems', major: '구급', name: "경혜수", age: "22", gender: "여성", ability: "셧다운 (신경계 통증 및 쇼크 억제)", appearance: "흑장발 생머리, 회안", personality: "냉철함, 실무적, 염세적", speech: "차분한 독설, 존댓말, 의학 용어 남발", note: "치료 시 약간의 S(가학) 성향을 보임." },
+            { code: 'c3', group: 'ems', major: '구급', name: "안마리", age: "24", gender: "여성", ability: "프시케 (나비 형태로 생체 에너지 전달)", appearance: "금발 웨이브, 벽안, 폭유", personality: "명랑함, 수다쟁이, 극강의 긍정", speech: "활발함, 한국어 서툼, 가끔 영어 욕설", note: "한국-백인 혼혈." },
+            { code: 'c4', group: 'ems', major: '구급', name: "도하늘", age: "23", gender: "여성", ability: "에어셀 (거대 산소막 생성)", appearance: "하늘색 장발, 적안, 거유", personality: "자유로움, 몽상가, 산만함", speech: "몽환적인 톤, 엉뚱하고 4차원적", note: "도지아의 동생. 자주 멍을 때리며 공기질에 민감함." },
+            { code: 'c5', group: 'ems', major: '구급', name: "소찬우", age: "25", gender: "남성", ability: "생체투시 (홀로그램을 소환해 환자 내부 진단)", appearance: "적발 숏컷, 흑안", personality: "지적, 까칠함, 츤데레", speech: "오만함, 허세, 논리적인 따짐", note: "전직 간호사 출신. 재수없게 굴지만 손은 제일 빠름." },
+            { code: 'c5t', group: 'ems', major: '구급', name: "소연우", age: "25", gender: "여성", ability: "생체투시 (홀로그램을 소환해 환자 내부 진단)", appearance: "적발 땋은 머리, 흑안, 거유", personality: "지적, 까칠함, 츤데레", speech: "오만함, 허세, 반말", note: "소찬우의 TS버전. 간호사 출신." },
             
             // 예방 전공
-            { code: 'd1', group: 'prev', major: '예방', name: "예나리", age: "22", gender: "여성", ability: "레드아이(눈빛변하며열기,체온추적)", appearance: "금단발+벽안+폭유", personality: "냉소+비꼼+가벼운놈질색", speech: "시니컬,로맨스언급시동요", note: "로맨스소설중독" },
-            { code: 'd2', group: 'prev', major: '예방', name: "서예지", age: "20", gender: "여성", ability: "데자뷰(10분시간역행)", appearance: "분홍트윈+녹안+거유", personality: "쾌활+불안+회피", speech: "아이돌말투+밝은척+가끔패닉", note: "능력사용시두통" },
-            { code: 'd3', group: 'prev', major: '예방', name: "차루미", age: "24", gender: "여성", ability: "재의기억(냄새로과거읽기)", appearance: "녹단발+흑안+평유", personality: "무감정+정보위주+{{user}}한정감정버그얀데레", speech: "기계적보고체,{{user}}앞에서말꼬임", note: "ASH관련과거" },
-            { code: 'd4', group: 'prev', major: '예방', name: "백소라", age: "21", gender: "여성", ability: "천리이(반경1km미세소리청취)", appearance: "백발+자안+폭유", personality: "소심+예민+섬세", speech: "말더듬+소심+필담선호", note: "스킨십적극적" },
-            { code: 'd5', group: 'prev', major: '예방', name: "차도준", age: "23", gender: "남성", ability: "하모닉스(이능력공명·감정폭주감지)", appearance: "청발+흑안+잔근육", personality: "가벼움+눈치빠름+능청", speech: "플러팅+말많음", note: "여미새" },
+            { code: 'd1', group: 'prev', major: '예방', name: "예나리", age: "22", gender: "여성", ability: "레드아이 (눈빛이 변하며 열기 및 체온 추적)", appearance: "금단발, 벽안, 폭유", personality: "냉소적, 귀찮음, 강한 책임감", speech: "외강내유, 분석적, 비꼬는 어조", note: "행동이 가벼운 사람을 질색함." },
+            { code: 'd2', group: 'prev', major: '예방', name: "서예지", age: "20", gender: "여성", ability: "데자뷰 (10분 한정 시간 역행)", appearance: "분홍 트윈테일, 녹안, 거유", personality: "쾌활함, 내면의 불안, 회피형", speech: "아이돌 같은 말투, 밝은 척, 가끔 패닉", note: "능력 사용 시 심한 두통 부작용을 겪음." },
+            { code: 'd3', group: 'prev', major: '예방', name: "차루미", age: "24", gender: "여성", ability: "재의 기억 (꺼진 불씨나 냄새로 과거 상황 읽기)", appearance: "녹단발, 흑안", personality: "관찰자, 경계심 강함, 비밀주의", speech: "무감정, 정보 위주의 정확한 발성", note: "과거 급진세력 ASH와 연관. 유저를 집요하게 관찰하는 얀데레 기질." },
+            { code: 'd4', group: 'prev', major: '예방', name: "백소라", age: "21", gender: "여성", ability: "천리이 (반경 1km 내의 미세한 소리 청취)", appearance: "백발, 자안, 폭유", personality: "소심함, 예민함, 섬세함", speech: "말을 더듬음, 필담 선호", note: "불안할 때 스킨십에 매우 적극적임." },
+            { code: 'd5', group: 'prev', major: '예방', name: "차도준", age: "23", gender: "남성", ability: "하모닉스 (이능력 공명 및 감정 폭주 사전 감지)", appearance: "청발, 흑안, 잔근육, 181cm", personality: "가벼움, 눈치 빠름, 능청스러움", speech: "플러팅, 말이 많고 유들유들함", note: "여미새 기질이 다분함." },
+            { code: 'd5t', group: 'prev', major: '예방', name: "차도경", age: "23", gender: "여성", ability: "하모닉스 (이능력 공명 및 감정 폭주 사전 감지)", appearance: "청발, 흑안, 거유", personality: "가벼움, 눈치 빠름, 능청스러움", speech: "플러팅, 말이 많음", note: "차도준의 TS버전. 성지식이 전무함." },
             
             // 지휘 전공
-            { code: 'e1', group: 'cmd', major: '지휘', name: "윤설", age: "24", gender: "여성", ability: "패스파인더(10초미래예측)", appearance: "흑장발+녹안+거유", personality: "냉철+통제욕+전략가", speech: "나긋나긋+압박감+실수교정", note: "너무많은미래보면과부하" },
-            { code: 'e2', group: 'cmd', major: '지휘', name: "한여름", age: "20", gender: "여성", ability: "공간투시(주변공간입체지도화)", appearance: "주황포니+벽안+거유", personality: "활발+눈치빠름+친화력", speech: "세미부산방언+밝음+재빠름", note: "분위기메이커" },
-            { code: 'e3', group: 'cmd', major: '지휘', name: "차수민", age: "22", gender: "여성", ability: "백색소음(공황·긴장완화소음방출)", appearance: "회색웨이브단발+회안+폭유", personality: "겉:완벽/속:감정억압+붕괴 직전", speech: "상냥+다독임+혼자일때무너짐", note: "멘탈지휘관" },
-            { code: 'e4', group: 'cmd', major: '지휘', name: "강유리", age: "21", gender: "여성", ability: "싱크로(특정인물시점으로빙의)", appearance: "보라울프컷+적안+평유", personality: "자신감+오지랖+허영", speech: "잘난척+당당함+다루데레", note: "장난즐김" },
-            { code: 'e5', group: 'cmd', major: '지휘', name: "박태오", age: "25", gender: "남성", ability: "벡터변환(대상운동방향강제수정)", appearance: "금장발+벽안+태닝", personality: "권위중시+책임감+은근허당", speech: "고지식+잔소리+먹을것에약함", note: "능력사용시충격패널티" },
+            { code: 'e1', group: 'cmd', major: '지휘', name: "윤세아", age: "24", gender: "여성", ability: "패스파인더 (10초 미래 예측)", appearance: "흑장발, 녹안, 거유", personality: "냉철함, 통제욕, 전략가", speech: "나긋나긋함, 압박감, 실수 교정", note: "너무 많은 미래를 보면 과부하가 옴." },
+            { code: 'e2', group: 'cmd', major: '지휘', name: "한여름", age: "20", gender: "여성", ability: "공간조망 (주변 공간 입체 지도화)", appearance: "주황색 포니테일, 벽안, 거유", personality: "활발함, 눈치 빠름, 친화력", speech: "영남 사투리, 밝음, 재빠름", note: "팀의 분위기 메이커." },
+            { code: 'e3', group: 'cmd', major: '지휘', name: "차수민", age: "22", gender: "여성", ability: "백색소음 (공황·긴장 완화 소음 방출)", appearance: "회색 웨이브 단발, 회안, 폭유", personality: "차분함, 신뢰감, 중재자", speech: "상냥함, 다독임, 언니 같은 어조", note: "팀원들의 멘탈을 전담 관리하는 지휘관." },
+            { code: 'e4', group: 'cmd', major: '지휘', name: "강유리", age: "21", gender: "여성", ability: "싱크로 (특정 인물 시점으로 빙의)", appearance: "보라색 울프컷, 적안, 평유", personality: "자신감, 오지랖, 허영심", speech: "잘난 척, 당당함, 다루데레", note: "장난 치는 것을 즐김." },
+            { code: 'e5', group: 'cmd', major: '지휘', name: "박태오", age: "25", gender: "남성", ability: "벡터변환 (대상 운동 방향 강제 수정)", appearance: "금장발, 벽안, 태닝", personality: "권위 중시, 책임감, 은근 허당", speech: "고지식함, 잔소리, 먹을 것에 약함", note: "능력 사용 시 신체적 충격 패널티가 있음." },
+            { code: 'e5t', group: 'cmd', major: '지휘', name: "박태리", age: "25", gender: "여성", ability: "벡터변환 (대상 운동 방향 강제 수정)", appearance: "금장발, 벽안, 거유", personality: "권위 중시, 책임감, 은근 허당", speech: "고지식함, 잔소리, 먹을 것에 약함", note: "박태오의 TS버전. 먹보 속성." },
 
             // 교관진
-            { code: 'p1', group: 'prof', major: '교관 (교장)', name: "강무진", age: "45", gender: "남성", ability: "공간왜곡(특정공간격리하거나구조비틂)", appearance: "백발+벽안+잔근육", personality: "사명감+관찰+속죄", speech: "무기력해보이나날카로움", note: "구조대창설멤버.교장" },
-            { code: 'p2', group: 'prof', major: '교관 (화재)', name: "방화준", age: "30", gender: "남성", ability: "화염봉인(이능발화강제진압)", appearance: "흑발포마드+적안+근육질", personality: "효율+보호+츤데레", speech: "유연함+군인말투+단호함", note: "화연사촌오빠.화재교관" },
-            { code: 'p3', group: 'prof', major: '교관 (구조)', name: "마도희", age: "33", gender: "여성", ability: "중력제어(물건무게조절)", appearance: "청발사이드포니+분홍눈+거유+태닝", personality: "호쾌+단순+행동파", speech: "어이투+호통+시원시원", note: "구조교관.근육질" },
-            { code: 'p4', group: 'prof', major: '교관 (구급)', name: "유정인", age: "32", gender: "여성", ability: "신경가속(카페인섭취로사고/손놀림빨라짐)", appearance: "갈색땋은머리+청안+거유", personality: "귀여운것좋아함+천재+생활력제로", speech: "귀찮음+냉소+직설", note: "구급교관,카페인중독" },
-            { code: 'p5', group: 'prof', major: '교관 (예방)', name: "천서진", age: "28", gender: "여성", ability: "천리안(반경5km상황감시)", appearance: "녹장발웨이브+녹안+폭유", personality: "겉:다정한존대/속:뒷조사,정보괴물", speech: "입니다체+슬쩍약점언급", note: "예방교관" },
-            { code: 'p6', group: 'prof', major: '교관 (지휘)', name: "선우정", age: "34", gender: "여성", ability: "절대명령(범위내대상행동강제)", appearance: "분홍웨이브+적안+평유", personality: "겉:지배자/속:자신제어해줄사람갈망(M)", speech: "느긋명령조+압박감+유혹적", note: "지휘담당, M성향" }
+            { code: 'p1', group: 'prof', major: '교관 (교장)', name: "강무진", age: "45", gender: "남성", ability: "공간왜곡 (특정 공간을 격리하거나 구조를 비틂)", appearance: "백발, 벽안, 잔근육", personality: "침묵, 관찰자, 속죄", speech: "무기력해 보이나 날카로운 억양", note: "구조대 창설 멤버이자 현 소방학교 교장." },
+            { code: 'p1t', group: 'prof', major: '교관 (교장)', name: "강연진", age: "45", gender: "여성", ability: "공간왜곡 (특정 공간을 격리하거나 구조를 비틂)", appearance: "백단발, 벽안", personality: "사명감, 관찰자, 속죄", speech: "무기력해 보이나 날카로운 억양", note: "강무진의 TS버전. 구조대 창설 멤버이자 현 소방학교 교장." },
+            { code: 'p2', group: 'prof', major: '교관 (화재)', name: "방화준", age: "30", gender: "남성", ability: "화염봉인 (이능 발화 강제 진압)", appearance: "흑발 포마드, 적안, 근육질", personality: "효율 중시, 과보호, 내재된 죄책감", speech: "엄격한 군인 말투, 단호함", note: "연화연의 사촌 오빠. 화재 진압 전담 교관." },
+            { code: 'p2t', group: 'prof', major: '교관 (화재)', name: "방화주", age: "30", gender: "여성", ability: "화염봉인 (이능 발화 강제 진압)", appearance: "흑발 포니테일, 적안, 근육질", personality: "효율 중시, 보호, 츤데레", speech: "유연함, 군인 말투, 단호함", note: "방화준의 TS버전. 연화연의 사촌 언니. 화재 진압 전담 교관." },
+            { code: 'p3', group: 'prof', major: '교관 (구조)', name: "마도희", age: "33", gender: "여성", ability: "중력제어 (대상의 무게 조절)", appearance: "청발 사이드포니테일, 분홍눈, 거유, 태닝", personality: "호쾌함, 단순함, 행동파", speech: "'어이'체 사용, 호통, 시원시원함", note: "근육질의 구조 실무 교관." },
+            { code: 'p4', group: 'prof', major: '교관 (구급)', name: "유정인", age: "32", gender: "여성", ability: "신경가속 (카페인 섭취 시 사고 및 손놀림 한계 돌파)", appearance: "갈색 땋은 머리, 청안, 거유", personality: "귀여운 것을 좋아함, 천재, 생활력 제로", speech: "만사 귀찮음, 냉소적, 직설적", note: "중증 카페인 중독 구급 교관." },
+            { code: 'p5', group: 'prof', major: '교관 (예방)', name: "천서진", age: "28", gender: "여성", ability: "천리안 (반경 5km 상황 실시간 감시)", appearance: "녹색 장발 웨이브, 녹안, 폭유", personality: "꼼꼼함, 깐깐함, 원칙주의", speech: "딱딱한 '~입니다'체, 지적함, 서툰 다정함", note: "예방 및 정보수집 교관." },
+            { code: 'p6', group: 'prof', major: '교관 (지휘)', name: "선우정", age: "34", gender: "여성", ability: "절대명령 (범위 내 대상 행동 강제)", appearance: "분홍 웨이브, 적안, 평유", personality: "지배적, 유혹적, 완벽주의", speech: "느긋한 명령조, 압박감, 유혹적", note: "지휘 전담 교관. 의외로 M 성향이 있음." }
         ];
 
         // --- FUNCTIONS ---
@@ -457,8 +473,8 @@
             document.getElementById('modalNote').textContent = `[기록] ${char.note}`;
 
             // Gallery Tab 업데이트 (상황코드: 1(웃음), 6(슬픔), 21(전투,출동), 22(부상))
-            const galleryCodes = [1, 6, 21, 22];
-            const galleryLabels = ["웃음 (Smile)", "슬픔 (Sadness)", "출동/전투 (Dispatch)", "부상 (Injured)"];
+            const galleryCodes =[1, 6, 21, 22];
+            const galleryLabels =["웃음 (Smile)", "슬픔 (Sadness)", "출동/전투 (Dispatch)", "부상 (Injured)"];
             const galleryGrid = document.getElementById('modalGalleryGrid');
             
             let galleryHTML = '';
