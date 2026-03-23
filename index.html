@@ -17,6 +17,7 @@
             --bg-darker: #111111;
             --border-color: #333333;
             --text-muted: #888888;
+            --ash-color: #e53935; /* ASH 전용 적색 */
         }
 
         .main-nav { background: #000; border-bottom: 1px solid var(--border-color); padding: 0; position: sticky; top: 0; z-index: 100; }
@@ -28,6 +29,8 @@
         .nav-tab { padding: 10px 15px; cursor: pointer; border: none; background: none; color: var(--text-muted); font-size: 13px; letter-spacing: 1px; text-transform: uppercase; transition: all 0.3s ease; border-radius: 20px; font-weight: 600; }
         .nav-tab:hover { color: #fff; background: var(--bg-darker); }
         .nav-tab.active { color: #fff; background: var(--primary-color); }
+        .nav-tab.ash-tab:hover { color: #fff; background: var(--ash-color); }
+        .nav-tab.ash-tab.active { color: #fff; background: var(--ash-color); }
         
         .tab-content { display: none; animation: fadeIn 0.5s ease; }
         .tab-content.active { display: block; }
@@ -36,6 +39,7 @@
         .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
         h1 { text-align: center; color: #fff; margin-bottom: 60px; font-size: 2.5em; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
         h2.section-title { color: var(--primary-color); border-bottom: 2px solid var(--border-color); padding-bottom: 15px; margin: 60px 0 30px 0; font-weight: 700; letter-spacing: 2px; }
+        h2.ash-title { color: var(--ash-color); }
         
         /* Map Image Styles */
         .map-image { width: 100%; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 50px; box-shadow: 0 15px 30px rgba(0,0,0,0.5); object-fit: cover; }
@@ -43,11 +47,13 @@
         .character-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 25px; margin-bottom: 40px; }
         .character-card { background: var(--bg-dark); border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; cursor: pointer; transition: all 0.4s ease; display: flex; flex-direction: column; position: relative; }
         .character-card:hover { transform: translateY(-8px); border-color: var(--primary-color); box-shadow: 0 15px 30px rgba(255, 87, 34, 0.15); }
+        .ash-card:hover { border-color: var(--ash-color); box-shadow: 0 15px 30px rgba(229, 57, 53, 0.15); }
         .character-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; filter: grayscale(30%); transition: filter 0.4s ease; }
         .character-card:hover img { filter: grayscale(0%); }
         .character-info { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
         .character-name { font-size: 1.3em; font-weight: 800; margin-bottom: 5px; color: #fff; letter-spacing: 1px; }
         .character-sub { font-size: 0.85em; color: var(--secondary-color); margin-bottom: 10px; font-weight: bold; }
+        .ash-sub { color: var(--ash-color); }
         .character-brief { color: #aaa; line-height: 1.5; font-size: 0.9em; }
         
         .guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; }
@@ -59,8 +65,10 @@
         
         .guide-section { margin-bottom: 80px; }
         .guide-title { font-size: 1.6em; color: #fff; margin-bottom: 30px; border-left: 5px solid var(--primary-color); padding-left: 15px; letter-spacing: 1px; font-weight: 700;}
+        .ash-guide-title { border-left-color: var(--ash-color); }
         .guide-card { background: var(--bg-dark); padding: 30px; border-radius: 12px; border: 1px solid var(--border-color); margin-bottom: 20px; }
         .guide-card h3 { color: var(--primary-color); margin-bottom: 15px; font-size: 1.2em; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; font-weight: 700;}
+        .guide-card.ash-card h3 { color: var(--ash-color); }
         
         .rank-table { width: 100%; border-collapse: collapse; margin-top: 15px; background: var(--bg-dark); border-radius: 8px; overflow: hidden; }
         .rank-table th, .rank-table td { text-align: left; padding: 15px; border-bottom: 1px solid var(--border-color); }
@@ -122,6 +130,7 @@
                 <button class="nav-tab active" onclick="switchMainTab('characters')">대원 명부</button>
                 <button class="nav-tab" onclick="switchMainTab('world')">재난 및 시설정보</button>
                 <button class="nav-tab" onclick="switchMainTab('schedule')">학교 일정</button>
+                <button class="nav-tab ash-tab" onclick="switchMainTab('ash')">ASH 세력</button>
             </div>
         </div>
     </nav>
@@ -159,7 +168,7 @@
         <div class="container">
             <h1>재난 및 시설정보</h1>
             
-            <!-- 소방학교 지도 이미지 추가 -->
+            <!-- 소방학교 지도 이미지 -->
             <img src="https://silou.org/AE/bg/0.webp" alt="이능력 소방학교 지도" class="map-image">
             
             <div class="guide-section">
@@ -272,6 +281,32 @@
         </div>
     </div>
 
+    <!-- ASH Tab -->
+    <div id="ashTab" class="tab-content">
+        <div class="container">
+            <h1>ASH (Anti-Superhuman Hierarchy)</h1>
+
+            <div class="guide-section">
+                <h2 class="guide-title ash-guide-title">조직 개요 및 목적</h2>
+                <div class="guide-card ash-card">
+                    <h3>🔥 이능력자 차별 저항 급진 무장 세력</h3>
+                    <p>정부와 관리국의 이능력자 등록·감시 체계를 <strong>'현대판 낙인'</strong>이라 규정하며 무력으로 저항하는 세력입니다. 2020년 대공명 화재를 계기로 설립되었으며, 사회 주요 시설을 타격하거나 의도적으로 이능 화재를 발생시켜 혼란을 조장합니다.</p>
+                </div>
+                <div class="guide-card ash-card">
+                    <h3>🔥 프로메테우스 프로젝트 (Prometheus Project)</h3>
+                    <p>이들의 궁극적인 목표는 <strong>"모든 인간을 불로서 정화하고, 강제로 이능력을 개화하게 만들어 모두가 평등한 세상이 되게 하겠다"</strong>는 것입니다.<br><br>
+                    강력한 이능력 화재에 노출된 일반인은 <strong>5%의 확률로 이능력자로 강제 개화</strong>하는 특성을 이용하며, 2023년 연화연(a1)이 휘말린 재난의 주동자이자 그녀의 능력을 강제로 개화시킨 원흉이기도 합니다.</p>
+                </div>
+            </div>
+
+            <h2 class="section-title ash-title">주요 수배자 명단 (High-Value Targets)</h2>
+            <div class="character-grid" id="ashGrid"></div>
+
+            <hr>
+            <div class="footer">CLASSIFIED : RESTRICTED ACCESS (MANAGEMENT BUREAU)</div>
+        </div>
+    </div>
+
     <!-- Modal -->
     <div class="modal-overlay" id="modalOverlay">
         <div class="modal-content">
@@ -295,8 +330,8 @@
                     <div class="details-content">
                         <div class="info-row">
                             <div class="detail-item">
-                                <div class="detail-label">전공 (Major)</div>
-                                <div class="detail-value" id="modalMajor" style="color:var(--primary-color); font-weight:bold;"></div>
+                                <div class="detail-label">소속 / 전공 (Major)</div>
+                                <div class="detail-value" id="modalMajor" style="font-weight:bold;"></div>
                             </div>
                             <div class="detail-item">
                                 <div class="detail-label">나이 / 성별</div>
@@ -374,7 +409,7 @@
             { code: 'd5t', group: 'prev', major: '예방', name: "차도경", age: "23", gender: "여성", ability: "하모닉스 (이능력 공명 및 감정 폭주 사전 감지)", appearance: "청발, 흑안, 거유", personality: "가벼움, 눈치 빠름, 능청스러움", speech: "플러팅, 말이 많음", note: "차도준의 TS버전. 성지식이 전무함." },
             
             // 지휘 전공
-            { code: 'e1', group: 'cmd', major: '지휘', name: "윤세아", age: "24", gender: "여성", ability: "패스파인더 (10초 미래 예측)", appearance: "흑장발, 녹안, 거유", personality: "냉철함, 통제욕, 전략가", speech: "나긋나긋함, 압박감, 실수 교정", note: "너무 많은 미래를 보면 과부하가 옴." },
+            { code: 'e1', group: 'cmd', major: '지휘', name: "윤설", age: "24", gender: "여성", ability: "패스파인더 (10초 미래 예측)", appearance: "흑장발, 녹안, 거유", personality: "냉철함, 통제욕, 전략가", speech: "나긋나긋함, 압박감, 실수 교정", note: "너무 많은 미래를 보면 과부하가 옴." },
             { code: 'e2', group: 'cmd', major: '지휘', name: "한여름", age: "20", gender: "여성", ability: "공간조망 (주변 공간 입체 지도화)", appearance: "주황색 포니테일, 벽안, 거유", personality: "활발함, 눈치 빠름, 친화력", speech: "영남 사투리, 밝음, 재빠름", note: "팀의 분위기 메이커." },
             { code: 'e3', group: 'cmd', major: '지휘', name: "차수민", age: "22", gender: "여성", ability: "백색소음 (공황·긴장 완화 소음 방출)", appearance: "회색 웨이브 단발, 회안, 폭유", personality: "차분함, 신뢰감, 중재자", speech: "상냥함, 다독임, 언니 같은 어조", note: "팀원들의 멘탈을 전담 관리하는 지휘관." },
             { code: 'e4', group: 'cmd', major: '지휘', name: "강유리", age: "21", gender: "여성", ability: "싱크로 (특정 인물 시점으로 빙의)", appearance: "보라색 울프컷, 적안, 평유", personality: "자신감, 오지랖, 허영심", speech: "잘난 척, 당당함, 다루데레", note: "장난 치는 것을 즐김." },
@@ -389,7 +424,12 @@
             { code: 'p3', group: 'prof', major: '교관 (구조)', name: "마도희", age: "33", gender: "여성", ability: "중력제어 (대상의 무게 조절)", appearance: "청발 사이드포니테일, 분홍눈, 거유, 태닝", personality: "호쾌함, 단순함, 행동파", speech: "'어이'체 사용, 호통, 시원시원함", note: "근육질의 구조 실무 교관." },
             { code: 'p4', group: 'prof', major: '교관 (구급)', name: "유정인", age: "32", gender: "여성", ability: "신경가속 (카페인 섭취 시 사고 및 손놀림 한계 돌파)", appearance: "갈색 땋은 머리, 청안, 거유", personality: "귀여운 것을 좋아함, 천재, 생활력 제로", speech: "만사 귀찮음, 냉소적, 직설적", note: "중증 카페인 중독 구급 교관." },
             { code: 'p5', group: 'prof', major: '교관 (예방)', name: "천서진", age: "28", gender: "여성", ability: "천리안 (반경 5km 상황 실시간 감시)", appearance: "녹색 장발 웨이브, 녹안, 폭유", personality: "꼼꼼함, 깐깐함, 원칙주의", speech: "딱딱한 '~입니다'체, 지적함, 서툰 다정함", note: "예방 및 정보수집 교관." },
-            { code: 'p6', group: 'prof', major: '교관 (지휘)', name: "선우정", age: "34", gender: "여성", ability: "절대명령 (범위 내 대상 행동 강제)", appearance: "분홍 웨이브, 적안, 평유", personality: "지배적, 유혹적, 완벽주의", speech: "느긋한 명령조, 압박감, 유혹적", note: "지휘 전담 교관. 의외로 M 성향이 있음." }
+            { code: 'p6', group: 'prof', major: '교관 (지휘)', name: "선우정", age: "34", gender: "여성", ability: "절대명령 (범위 내 대상 행동 강제)", appearance: "분홍 웨이브, 적안, 평유", personality: "지배적, 유혹적, 완벽주의", speech: "느긋한 명령조, 압박감, 유혹적", note: "지휘 전담 교관. 의외로 M 성향이 있음." },
+            
+            // ASH 세력
+            { code: 'h1', group: 'ash', major: 'ASH 리더', name: "염라진", age: "27", gender: "여성", ability: "흑염동조 (화염·열기 오염 및 폭주)", appearance: "금발 트윈테일, 적안, 거유", personality: "장난기, 지배적, 강한 확신", speech: "느긋함, 비웃음, 선고하듯 말함", note: "ASH의 리더. 2023년 연화연 사건의 진범. 코드명: 레드" },
+            { code: 'h2', group: 'ash', major: 'ASH 간부', name: "백시연", age: "26", gender: "여성", ability: "백색갈증 (산소 과생성으로 화재 및 질식 유발)", appearance: "흑발 포니테일, 흑안, 폭유", personality: "허무주의, 염세적, 관조적", speech: "낮은 톤, 시큰둥함, 철학적 어조", note: "불을 보면 텐션이 과도하게 높아짐. 코드명: 화이트" },
+            { code: 'h3', group: 'ash', major: 'ASH 간부', name: "하영", age: "24", gender: "여성", ability: "잿빛환영 (연기로 환각 생성)", appearance: "은장발, 보라색 역안, 폭유", personality: "집착, 장난기, 광기", speech: "친근함, 속삭임, 말끝을 흐림", note: "심문 및 세뇌 특화. 코드명: 그레이" }
         ];
 
         // --- FUNCTIONS ---
@@ -424,12 +464,16 @@
         // 캐릭터 카드 생성
         function createCharCard(char, index) {
             const card = document.createElement('div');
-            card.className = 'character-card';
+            card.className = char.group === 'ash' ? 'character-card ash-card' : 'character-card';
+            
+            const majorColorClass = char.group === 'ash' ? 'character-sub ash-sub' : 'character-sub';
+            const majorText = char.group === 'ash' || char.group === 'prof' ? char.major : `${char.major} 전공`;
+
             card.innerHTML = `
                 <img src="${getCharImageUrl(char.code, 1)}" alt="${char.name}" loading="lazy">
                 <div class="character-info">
                     <div class="character-name">${char.name}</div>
-                    <div class="character-sub">${char.major} 전공 | ${char.age}세</div>
+                    <div class="${majorColorClass}">${majorText} | ${char.age}세</div>
                     <div class="character-brief">${char.ability}</div>
                 </div>
             `;
@@ -445,7 +489,8 @@
                 'ems': document.getElementById('emsGrid'),
                 'prev': document.getElementById('prevGrid'),
                 'cmd': document.getElementById('cmdGrid'),
-                'prof': document.getElementById('profGrid')
+                'prof': document.getElementById('profGrid'),
+                'ash': document.getElementById('ashGrid')
             };
 
             characters.forEach((char, idx) => {
@@ -464,13 +509,21 @@
             
             // Details Tab 업데이트
             document.getElementById('modalImg').src = getCharImageUrl(char.code, 1);
-            document.getElementById('modalMajor').textContent = char.major;
+            
+            const majorEl = document.getElementById('modalMajor');
+            majorEl.textContent = char.group === 'ash' || char.group === 'prof' ? char.major : `${char.major} 전공`;
+            majorEl.style.color = char.group === 'ash' ? 'var(--ash-color)' : 'var(--primary-color)';
+
             document.getElementById('modalAgeGender').textContent = `${char.age}세 / ${char.gender}`;
             document.getElementById('modalSkill').textContent = char.ability;
             document.getElementById('modalAppearance').textContent = char.appearance;
             document.getElementById('modalPersonality').textContent = char.personality;
             document.getElementById('modalSpeech').textContent = char.speech;
-            document.getElementById('modalNote').textContent = `[기록] ${char.note}`;
+            
+            const noteEl = document.getElementById('modalNote');
+            noteEl.textContent = `[기록] ${char.note}`;
+            noteEl.style.borderLeftColor = char.group === 'ash' ? 'var(--ash-color)' : 'var(--primary-color)';
+            noteEl.style.backgroundColor = char.group === 'ash' ? 'rgba(229, 57, 53, 0.05)' : 'rgba(255, 87, 34, 0.05)';
 
             // Gallery Tab 업데이트 (상황코드: 1(웃음), 6(슬픔), 21(전투,출동), 22(부상))
             const galleryCodes =[1, 6, 21, 22];
