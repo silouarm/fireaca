@@ -155,6 +155,9 @@
             <h2 class="section-title">📡 지휘 전공 (Command & Control)</h2>
             <div class="character-grid" id="cmdGrid"></div>
 
+            <h2 class="section-title">🏢 관리국 (Management Bureau)</h2>
+            <div class="character-grid" id="govGrid"></div>
+
             <h2 class="section-title">📋 교관진 (Instructors)</h2>
             <div class="character-grid" id="profGrid"></div>
             
@@ -416,6 +419,10 @@
             { code: 'e5', group: 'cmd', major: '지휘', name: "박태오", age: "25", gender: "남성", ability: "벡터변환 (대상 운동 방향 강제 수정)", appearance: "금장발, 벽안, 태닝", personality: "권위 중시, 책임감, 은근 허당", speech: "고지식함, 잔소리, 먹을 것에 약함", note: "능력 사용 시 신체적 충격 패널티가 있음." },
             { code: 'e5t', group: 'cmd', major: '지휘', name: "박태리", age: "25", gender: "여성", ability: "벡터변환 (대상 운동 방향 강제 수정)", appearance: "금장발, 벽안, 거유", personality: "권위 중시, 책임감, 은근 허당", speech: "고지식함, 잔소리, 먹을 것에 약함", note: "박태오의 TS버전. 먹보 속성." },
 
+            // 관리국
+            { code: 'g1', group: 'gov', major: '관리국', name: "한소미", age: "24", gender: "여성", ability: "절대규격 (대상 물리적 수치 변형)", appearance: "핑크 웨이브, 적안, 거유", personality: "어리숙함, 겁 많음, 순수함", speech: "어눌함, 존댓말, 긍정적", note: "관리국 소속 막내 직원." },
+            { code: 'g2', group: 'gov', major: '관리국', name: "서지수", age: "28", gender: "여성", ability: "규칙준수 (지정 범위에 규칙 선포)", appearance: "흑발 올림머리, 갈색눈, 평유", personality: "꼼꼼함, 일중독, 트라우마", speech: "냉소적, 팩트폭력, 지적함", note: "관리국 주임." },
+
             // 교관진
             { code: 'p1', group: 'prof', major: '교관 (교장)', name: "강무진", age: "45", gender: "남성", ability: "공간왜곡 (특정 공간을 격리하거나 구조를 비틂)", appearance: "백발, 벽안, 잔근육", personality: "침묵, 관찰자, 속죄", speech: "무기력해 보이나 날카로운 억양", note: "구조대 창설 멤버이자 현 소방학교 교장." },
             { code: 'p1t', group: 'prof', major: '교관 (교장)', name: "강연진", age: "45", gender: "여성", ability: "공간왜곡 (특정 공간을 격리하거나 구조를 비틂)", appearance: "백단발, 벽안", personality: "사명감, 관찰자, 속죄", speech: "무기력해 보이나 날카로운 억양", note: "강무진의 TS버전. 구조대 창설 멤버이자 현 소방학교 교장." },
@@ -467,7 +474,7 @@
             card.className = char.group === 'ash' ? 'character-card ash-card' : 'character-card';
             
             const majorColorClass = char.group === 'ash' ? 'character-sub ash-sub' : 'character-sub';
-            const majorText = char.group === 'ash' || char.group === 'prof' ? char.major : `${char.major} 전공`;
+            const majorText = (char.group === 'ash' || char.group === 'prof' || char.group === 'gov') ? char.major : `${char.major} 전공`;
 
             card.innerHTML = `
                 <img src="${getCharImageUrl(char.code, 1)}" alt="${char.name}" loading="lazy">
@@ -489,6 +496,7 @@
                 'ems': document.getElementById('emsGrid'),
                 'prev': document.getElementById('prevGrid'),
                 'cmd': document.getElementById('cmdGrid'),
+                'gov': document.getElementById('govGrid'),
                 'prof': document.getElementById('profGrid'),
                 'ash': document.getElementById('ashGrid')
             };
@@ -511,7 +519,7 @@
             document.getElementById('modalImg').src = getCharImageUrl(char.code, 1);
             
             const majorEl = document.getElementById('modalMajor');
-            majorEl.textContent = char.group === 'ash' || char.group === 'prof' ? char.major : `${char.major} 전공`;
+            majorEl.textContent = (char.group === 'ash' || char.group === 'prof' || char.group === 'gov') ? char.major : `${char.major} 전공`;
             majorEl.style.color = char.group === 'ash' ? 'var(--ash-color)' : 'var(--primary-color)';
 
             document.getElementById('modalAgeGender').textContent = `${char.age}세 / ${char.gender}`;
